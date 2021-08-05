@@ -18,6 +18,7 @@ def logWrite(content):
 
 
 def wgConfig(outputDir :str, peer :Peer):
+    print("[*] wireguard config generator init ...")
     configContent = getTemplate(template["wgconfig"])
     rules = peer.wgReplaceRule()
     for key in rules.keys():
@@ -28,6 +29,7 @@ def wgConfig(outputDir :str, peer :Peer):
     pass
 
 def birdConfig(outputDir :str,  peer :Peer):
+    print("[*] bird config generator init ...")
     configContent = getTemplate(template["birdconfig"])
     rules = peer.birdReplaceRule()
     for key in rules.keys():
@@ -39,6 +41,7 @@ def birdConfig(outputDir :str,  peer :Peer):
 
 
 def main():
+
     parser = argparse.ArgumentParser()
     parser.add_argument("mode",help="change jsonfile read mode and ",choices=["file","hand"])
     parser.add_argument("-d","--dir",help="config output dir,at default it will add a new folder at this repos output dir")
@@ -54,7 +57,7 @@ def main():
     parser.add_argument("-v","--output-json",help="print the config json only",action="store_true")
     arg = parser.parse_args()
 
-    print( arg )
+    # print( arg )
 
     if arg.mode == "file":
         if arg.file != None:
@@ -89,7 +92,7 @@ def main():
                 dn42IPv4=peerinfo["dn42_ipv4"],
                 dn42IPv6=peerinfo["dn42_ipv6"]
                 )
-    print("[+] Generate Success ...")
+    print("[+] Generate Success! ")
 
     if not os.path.exists(template["wg_output"]) :
         os.mkdir(template["wg_output"])
@@ -99,7 +102,11 @@ def main():
     wgConfig(template["wg_output"],peer)
     birdConfig(template["bird_output"],peer)
 
+    print("")
+    print("")
+
 
 
 if __name__ == "__main__":
+    banner()
     main()
