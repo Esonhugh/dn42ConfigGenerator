@@ -141,6 +141,6 @@ dmypy.json
 cython_debug/
 
 # Some secret files
-secret/
+secret/privatekey
 output/
 log
