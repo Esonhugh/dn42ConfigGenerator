@@ -142,4 +142,5 @@ cython_debug/
 
 # Some secret files
 secret/
+output/
 log

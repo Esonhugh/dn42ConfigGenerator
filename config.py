@@ -3,7 +3,9 @@ path = "./"
 template = {
     "privatekey":   "./secret/privatekey",
     "wgconfig":     "./config/wgconfig.conf",
-    "birdconfig":   "./config/birdconfig.conf"
+    "birdconfig":   "./config/birdconfig.conf",
+    "wg_output":    "./output/",
+    "bird_output":  "./output/"
 }
 
 def getPrivateKey():
@@ -78,5 +80,6 @@ if __name__ == "__main__":
                 dn42IPv4="172.20.42.193",dn42IPv6="fe80:2239"
                 )
     print(peer)
+    print()
     print(peer.wgReplaceRule())
     print(peer.birdReplaceRule())
