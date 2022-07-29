@@ -91,6 +91,8 @@ class Peer():
     def __repr__(self):
         return self.infoDict.__repr__()
 
+'''
+#############################################################################
 if __name__ == "__main__":
     peer = Peer(asn="4242422239",peer="eson",
                 pubIP="kali.esonhugh.me",pubkey="This is the pubkey",
@@ -100,3 +102,5 @@ if __name__ == "__main__":
     print()
     print(peer.wgReplaceRule())
     print(peer.birdReplaceRule())
+#############################################################################
+'''

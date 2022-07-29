@@ -2,7 +2,7 @@
 
 # Demo
 ```
- py peerConfiger.py hand -s '{"name": "esonhugh", "asn": "4242422239", "dn42_ipv4": "172.20.42.193", "dn42_ipv6": "fe80::2239", "wg_public_key": "this is public key", "public_ip": "kali.esonhugh.me"}'
+ py main.py hand -s '{"name": "esonhugh", "asn": "4242422239", "dn42_ipv4": "172.20.42.193", "dn42_ipv6": "fe80::2239", "wg_public_key": "this is public key", "public_ip": "kali.esonhugh.me"}'
 
              ____  _   _ _  _  ____     ____             __ _       
             |  _ \| \ | | || ||___ \   / ___|___  _ __  / _(_) __ _ 
