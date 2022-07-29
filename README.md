@@ -1,6 +1,6 @@
 # DN42 config generator
 
-# Demo
+## Demo
 ```
  py main.py hand -s '{"name": "esonhugh", "asn": "4242422239", "dn42_ipv4": "172.20.42.193", "dn42_ipv6": "fe80::2239", "wg_public_key": "this is public key", "public_ip": "kali.esonhugh.me"}'
 
@@ -26,11 +26,23 @@
 [+] flie at  ./output/esonhugh_bird.conf
 ```
 
-# Usage
+## Usage
 
-1. change the config.py file with your flavour
-2. change the config template file with you personal infomation
-3. get peer's json file which contains his infomation
+1. change the config.py file with your flavour custom your location or others
+2. change the config template file with you personal infomation in config folder
+3. put your wireguard secret key in secret folder
+4. get peer's information
+5. using like example or follow command line arguments
+6. then you will got your config file of wireguard and bird in output 
+7. configure them in wireguard and bird in you local machine and you finished the peering operation of your side.
+
+## info
+
+hand means using input in commandline 
+
+file means using file
+
+-s can read json strings and get config and store
 
 ```
 usage: peerConfiger.py [-h] [-d DIR] [-f FILE] [-n NAME] [--asn ASN] [--pub-ip PUB_IP] [--pub-key PUB_KEY] [--dn42-ipv4 DN42_IPV4] [--dn42-ipv6 DN42_IPV6] [-s JSON_STR] [-v]
